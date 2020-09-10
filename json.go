@@ -48,6 +48,7 @@ type Check struct {
 	Ipv6                     bool     `json:"ipv6"`
 	VerifyCertificate        bool     `json:"verify_certificate"`
 	SslDownDaysBefore        int      `json:"ssl_down_days_before"`
+	Severity                 string   `json:"severity_level"`
 }
 
 // Make check slice sortable

@@ -131,7 +131,7 @@ func (r *RestClient) Post(uri string, json []byte) (data []byte, error error) {
 
 func (r *RestClient) doRequest(req *http.Request) ([]byte, error) {
 	//req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("UserAgent", "gopingdom")
+	req.Header.Set("UserAgent", "go-pdom")
 	req.Header.Set("Authorization", "Bearer "+r.token)
 
 	resp, err := r.webClient.Do(req)

@@ -7,7 +7,7 @@ import (
 )
 
 func (r *RestClient) UptimeGetChecks() (cks Checks, error error) {
-	uri := "/checks"
+	uri := "/checks?include_severity=true&include_tags=true"
 
 	data, err := r.Get(uri)
 	if err != nil {

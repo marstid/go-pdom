@@ -26,11 +26,19 @@ func TestClient(t *testing.T) {
 		}
 
 	}
-	check2, err := c.UptimeGetCheckDetails(checks[0].ID)
+	check2, err := c.UptimeGetCheckDetails(checks[21].ID)
 	if err != nil {
 		t.Error(err)
 	}
 	fmt.Println()
 	fmt.Printf("ID: %d, Name: %s, Host: %s, Status: %s\n", check2.ID, check2.Name, check2.Hostname, check2.Status)
+
+	check3, err := c.UptimeGetCheckDetails(5117922)
+	if err != nil {
+		t.Error(err)
+	}
+	fmt.Println()
+	fmt.Printf("ID: %d, Name: %s, Host: %s, Status: %s, Severity: %s\n", check3.ID, check3.Name, check3.Hostname, check3.Status, check3.Severity)
+
 
 }
